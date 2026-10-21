@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Event Swash — AV Rental Website
 
-## Getting Started
+A responsive, multi-route Next.js App Router site for Event Swash, an audio-visual rental business in Bengaluru. It includes an editorial homepage, searchable equipment catalogue, product detail routes, persistent quote builder, WhatsApp enquiry flow, contact form, FAQs and draft legal pages.
 
-First, run the development server:
+## Run locally
+
+Requirements: Node.js compatible with Next.js 16 and npm.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). For a production build:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run lint
+npx tsc --noEmit
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+No database, authentication or environment variables are required.
 
-## Learn More
+## Main routes
 
-To learn more about Next.js, take a look at the following resources:
+- `/` — Homepage and service overview
+- `/catalogue` — Search, category filter, sort and equipment list
+- `/catalogue/[slug]` — Product reference details
+- `/why-us`, `/about`, `/faq`, `/contact`
+- `/privacy-policy`, `/terms-and-conditions`, `/refund-cancellation`, `/disclaimer`
+- `/sitemap.xml` and `/robots.txt`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Data and pre-launch review
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Product records live in `src/lib/products.ts`; quote estimates and the contact message use that shared catalogue. The accessible reference exposed eight example price listings, although its homepage reports 52 products and packages. The remaining catalogue was not accessible during this implementation, so the site does not fabricate products, prices, availability or specifications. Confirm the complete inventory and all rates with Event Wave before launch.
 
-## Deploy on Vercel
+Business contact information and claims were supplied in the project brief and should be confirmed. Legal routes are explicitly drafts because the source policy pages redirected to the homepage during review; obtain approved legal copy before publication. Product and event images are illustrative Unsplash-hosted photography, not representations of specific Event Wave equipment.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploy as a standard Next.js application (for example, to Vercel or a Node.js host). Configure the production domain in `src/app/layout.tsx`, `src/app/sitemap.ts` and `src/app/robots.ts` if it differs from `https://www.eventwave.in`. The remote image host `images.unsplash.com` is allowed in `next.config.ts`.
