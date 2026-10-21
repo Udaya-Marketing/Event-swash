@@ -1,6 +1,6 @@
 # Event Swash — AV Rental Website
 
-A responsive, multi-route Next.js App Router site for Event Swash, an audio-visual rental business in Bengaluru. It includes an editorial homepage, searchable equipment catalogue, product detail routes, persistent quote builder, WhatsApp enquiry flow, contact form, FAQs and draft legal pages.
+A modern, responsive AV equipment rental website built with Next.js, React, TypeScript, and Tailwind CSS. The multi-route App Router site for Event Swash, an audio-visual rental business in Bengaluru, includes an editorial homepage, searchable equipment catalogue, product detail routes, rental price estimates, a persistent quote builder, WhatsApp enquiries, contact form, FAQs, and draft legal pages.
 
 ## Run locally
 
