@@ -83,10 +83,10 @@ export default function Home() {
       </section>
 
       <section className="stats-strip" aria-label="About Event Swash">
-        <div><span>ESTABLISHED</span><strong>2018</strong></div>
-        <div><span>TEAM EXPERIENCE</span><strong>8 years</strong></div>
+        <div><span>ESTABLISHED</span><strong>2023</strong></div>
+        <div><span>TEAM EXPERIENCE</span><strong>4 to 6 years</strong></div>
         <div><span>PRODUCTS & PACKAGES</span><strong>52 reported</strong></div>
-        <p>The source homepage reports 52 products and packages. Only {products.length} price examples were accessible; the full inventory and current rates need confirmation. Team experience is as stated in the source brief.</p>
+        <p>The source homepage reports 52 products and packages. Only {products.length} price examples were accessible; the full inventory and current rates need confirmation. Team experience is reported as 4 to 6 years.</p>
       </section>
       <EventDatePlanner />
 
@@ -206,8 +206,8 @@ export default function Home() {
 
       <section className="about-teaser section">
         <div className="about-teaser-copy">
-          <span className="eyebrow">ROOTED IN BENGALURU · EST. 2018</span>
-          <h2>Your trusted AV partner since 2018.</h2>
+          <span className="eyebrow">ROOTED IN BENGALURU · EST. 2023</span>
+          <h2>Your trusted AV partner since 2023.</h2>
           <p>
             Event Swash provides audio, lighting, trussing and LED screen rentals
             for events of different sizes and budgets. The work is guided by
@@ -216,7 +216,7 @@ export default function Home() {
           <Link className="text-link" href="/about">Get to know Event Swash <ArrowUpRight size={16} /></Link>
         </div>
         <EditorialImage src={imageSet.launch} alt="Event stage and lighting production" />
-        <div className="about-teaser-note"><span>TEAM EXPERIENCE</span><strong>8 years </strong><small> As stated by the business; verify before publication.</small></div>
+        <div className="about-teaser-note"><span>TEAM EXPERIENCE</span><strong>4 to 6 years </strong><small> As stated by the business; verify before publication.</small></div>
       </section>
 
       <section className="faq-section section section-paper">

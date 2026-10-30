@@ -7,7 +7,7 @@ import { imageSet } from "@/lib/content";
 export const metadata: Metadata = {
   title: "About Event Swash",
   description:
-    "Meet Event Swash, a Bengaluru audio-visual equipment rental company established in 2018.",
+    "Meet Event Swash, a Bengaluru audio-visual equipment rental company established in 2023.",
   alternates: { canonical: "/about" },
 };
 
@@ -22,7 +22,7 @@ export default function AboutPage() {
       <section className="section story-section">
         <EditorialImage src={imageSet.rig} alt="Concert stage production with event lighting" className="story-image" loading="eager" />
         <div className="story-copy">
-          <span className="eyebrow">BENGALURU · ESTABLISHED 2018</span>
+          <span className="eyebrow">BENGALURU · ESTABLISHED 2023</span>
           <h2>Good events are built with care, not just equipment.</h2>
           <p>
             Event Swash provides audio-visual equipment rental solutions for events
