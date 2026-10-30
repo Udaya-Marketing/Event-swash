@@ -40,9 +40,9 @@ export default function AboutPage() {
         </div>
       </section>
       <section className="about-facts section section-paper">
-        <div><span className="eyebrow">ESTABLISHED</span><strong>2018</strong><p>Event Swash is based in Bengaluru.</p></div>
-        <div><span className="eyebrow">TEAM EXPERIENCE</span><strong>8 years</strong><p>Combined experience as stated in the source brief; confirm before publication.</p></div>
-        <div><span className="eyebrow">PROPRIETOR</span><strong>Devraj K P</strong><p>Name and role supplied in the brief; confirmation recommended.</p></div>
+        <div><span className="eyebrow">ESTABLISHED</span><strong>2023</strong><p>Event Swash is based in Bengaluru.</p></div>
+        <div><span className="eyebrow">TEAM EXPERIENCE</span><strong>4 to 6 years</strong><p>Combined experience as stated in the source brief; confirm before publication.</p></div>
+        <div><span className="eyebrow">PROPRIETOR</span><strong>Vivek</strong><p>Name and role supplied in the brief; confirmation recommended.</p></div>
       </section>
       <FinalCta />
     </>
