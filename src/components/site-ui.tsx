@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDownRight, ArrowUpRight, Plus } from "lucide-react";
+import { useState } from "react";
 import { useQuote } from "@/components/quote-provider";
 import { buildWhatsAppUrl, siteDetails } from "@/lib/content";
 import type { Product } from "@/lib/products";
@@ -21,14 +22,20 @@ export function EditorialImage({
   loading?: "eager" | "lazy";
   sizes?: string;
 }) {
+  const fallbackSrc = "/images/event-swash-led-stage.jpg";
+  const [failedSrc, setFailedSrc] = useState<string | null>(null);
+  const imageSrc = failedSrc === src ? fallbackSrc : src;
+
   return (
     <div className={`image-frame ${className}`}>
       <Image
-        src={src}
-        alt={alt}
+        src={imageSrc}
+        alt={imageSrc === fallbackSrc ? "Event production image" : alt}
         fill
         loading={loading}
         sizes={sizes}
+        unoptimized={src.startsWith("https://")}
+        onError={imageSrc === fallbackSrc ? undefined : () => setFailedSrc(src)}
         className="cover-image"
       />
     </div>
