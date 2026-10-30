@@ -2,11 +2,11 @@ export const siteDetails = {
   name: "Event Swash",
   phone: "+91 91879 29918",
   whatsapp: "919187929918",
-  emails: ["devraj@eventwave.in", "info@eventwave.in"],
+  emails: ["eventswash.v@gmail.com"],
   address:
-    "2254, 11th Main Road, 15E Bus Stop, Chandranagar, Kumaraswamy Layout, Bengaluru, Karnataka 560078, India",
+    "03, 1st Cross Rd, near BESCOM, Vittal Nagar, Banashankari 5th Stage, ISRO Layout, Bengaluru, Karnataka 560111",
   mapUrl:
-    "https://www.google.com/maps/search/?api=1&query=2254%2C+11th+Main+Road%2C+Kumaraswamy+Layout%2C+Bengaluru%2C+Karnataka+560078",
+        "https://maps.app.goo.gl/VkbMYHsGVDJgdMUB8",
   website: "https://www.eventwave.in",
 };
 

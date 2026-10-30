@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { EventDatePlanner } from "@/components/event-date-planner";
 import { FaqList } from "@/components/faq-list";
 import { FinalCta, ProductCard, SectionHeading, EditorialImage } from "@/components/site-ui";
-import { imageSet } from "@/lib/content";
+import { buildWhatsAppUrl, imageSet } from "@/lib/content";
 import { products } from "@/lib/products";
 
 const services = [
@@ -53,7 +53,7 @@ export default function Home() {
                 src={imageSet.hero}
                 alt="Event production stage with colorful LED video screens"
                 className="hero-editorial-image-content"
-                priority
+                loading="eager"
                 sizes="(max-width: 760px) calc(100vw - 36px), (max-width: 1200px) 84vw, 1000px"
               />
               <span className="hero-image-label">AUDIO · LIGHTING · LED · AV RENTALS — BENGALURU</span>
@@ -70,7 +70,7 @@ export default function Home() {
                 <Link className="button button-lime" href="/catalogue">
                   Browse the catalogue <ArrowUpRight size={16} />
                 </Link>
-                <a className="hero-whatsapp" href="https://wa.me/918550011040?text=Hello%20Event%20Swash%2C%20I%27d%20like%20to%20discuss%20an%20event." target="_blank" rel="noopener noreferrer">
+                <a className="hero-whatsapp" href={buildWhatsAppUrl("Hello Event Swash, I'd like to discuss an event.")} target="_blank" rel="noopener noreferrer">
                   WhatsApp us <ArrowUpRight size={15} />
                 </a>
               </div>
@@ -84,9 +84,9 @@ export default function Home() {
 
       <section className="stats-strip" aria-label="About Event Swash">
         <div><span>ESTABLISHED</span><strong>2018</strong></div>
-        <div><span>TEAM EXPERIENCE</span><strong>8 years*</strong></div>
-        <div><span>PRODUCTS & PACKAGES</span><strong>52 reported*</strong></div>
-        <p>*The source homepage reports 52 products and packages. Only {products.length} price examples were accessible; the full inventory and current rates need confirmation. Team experience is as stated in the source brief.</p>
+        <div><span>TEAM EXPERIENCE</span><strong>8 years</strong></div>
+        <div><span>PRODUCTS & PACKAGES</span><strong>52 reported</strong></div>
+        <p>The source homepage reports 52 products and packages. Only {products.length} price examples were accessible; the full inventory and current rates need confirmation. Team experience is as stated in the source brief.</p>
       </section>
       <EventDatePlanner />
 
@@ -216,7 +216,7 @@ export default function Home() {
           <Link className="text-link" href="/about">Get to know Event Swash <ArrowUpRight size={16} /></Link>
         </div>
         <EditorialImage src={imageSet.launch} alt="Event stage and lighting production" />
-        <div className="about-teaser-note"><span>TEAM EXPERIENCE</span><strong>8 years*</strong><small>*As stated by the business; verify before publication.</small></div>
+        <div className="about-teaser-note"><span>TEAM EXPERIENCE</span><strong>8 years </strong><small> As stated by the business; verify before publication.</small></div>
       </section>
 
       <section className="faq-section section section-paper">

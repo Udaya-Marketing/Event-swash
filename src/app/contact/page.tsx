@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ArrowUpRight, MapPin, Mail, Phone } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { PageIntro } from "@/components/site-ui";
-import { siteDetails } from "@/lib/content";
+import { buildWhatsAppUrl, siteDetails } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Contact & Event Enquiry",
@@ -26,8 +26,8 @@ export default function ContactPage() {
           <a className="contact-method" href={`tel:${siteDetails.phone.replaceAll(" ", "")}`}>
             <Phone size={18} /><span><small>CALL</small>{siteDetails.phone}</span><ArrowUpRight size={16} />
           </a>
-          <a className="contact-method" href={`https://wa.me/${siteDetails.whatsapp}?text=Hello%20Event%20Swash%2C%20I%27d%20like%20to%20discuss%20an%20event.`} target="_blank" rel="noopener noreferrer">
-            <span className="whatsapp-symbol">WA</span><span><small>WHATSAPP</small>+91 85500 11040</span><ArrowUpRight size={16} />
+          <a className="contact-method" href={buildWhatsAppUrl("Hello Event Swash, I'd like to discuss an event.")} target="_blank" rel="noopener noreferrer">
+            <span className="whatsapp-symbol">WA</span><span><small>WHATSAPP</small>{siteDetails.phone}</span><ArrowUpRight size={16} />
           </a>
           {siteDetails.emails.map((email) => (
             <a className="contact-method" href={`mailto:${email}`} key={email}>

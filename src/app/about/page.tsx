@@ -20,7 +20,7 @@ export default function AboutPage() {
         intro="An audio-visual rental partner based in Bengaluru, working across sound, lighting, trussing and LED screens."
       />
       <section className="section story-section">
-        <EditorialImage src={imageSet.rig} alt="Concert stage production with event lighting" className="story-image" />
+        <EditorialImage src={imageSet.rig} alt="Concert stage production with event lighting" className="story-image" loading="eager" />
         <div className="story-copy">
           <span className="eyebrow">BENGALURU · ESTABLISHED 2018</span>
           <h2>Good events are built with care, not just equipment.</h2>
@@ -41,8 +41,8 @@ export default function AboutPage() {
       </section>
       <section className="about-facts section section-paper">
         <div><span className="eyebrow">ESTABLISHED</span><strong>2018</strong><p>Event Swash is based in Bengaluru.</p></div>
-        <div><span className="eyebrow">TEAM EXPERIENCE</span><strong>8 years*</strong><p>*Combined experience as stated in the source brief; confirm before publication.</p></div>
-        <div><span className="eyebrow">PROPRIETOR</span><strong>Devraj K P*</strong><p>*Name and role supplied in the brief; confirmation recommended.</p></div>
+        <div><span className="eyebrow">TEAM EXPERIENCE</span><strong>8 years</strong><p>Combined experience as stated in the source brief; confirm before publication.</p></div>
+        <div><span className="eyebrow">PROPRIETOR</span><strong>Devraj K P</strong><p>Name and role supplied in the brief; confirmation recommended.</p></div>
       </section>
       <FinalCta />
     </>

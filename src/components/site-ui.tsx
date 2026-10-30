@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowDownRight, ArrowUpRight, Plus } from "lucide-react";
 import { useQuote } from "@/components/quote-provider";
+import { buildWhatsAppUrl, siteDetails } from "@/lib/content";
 import type { Product } from "@/lib/products";
 import { formatRupees } from "@/lib/products";
 
@@ -11,13 +12,13 @@ export function EditorialImage({
   src,
   alt,
   className = "",
-  priority = false,
+  loading,
   sizes = "(max-width: 760px) 100vw, (max-width: 1200px) 60vw, 50vw",
 }: {
   src: string;
   alt: string;
   className?: string;
-  priority?: boolean;
+  loading?: "eager" | "lazy";
   sizes?: string;
 }) {
   return (
@@ -26,7 +27,7 @@ export function EditorialImage({
         src={src}
         alt={alt}
         fill
-        priority={priority}
+        loading={loading}
         sizes={sizes}
         className="cover-image"
       />
@@ -115,8 +116,8 @@ export function FinalCta() {
         <p>Tell us your venue, date and audience. We’ll help shape the right AV setup.</p>
         <div className="cta-actions">
           <Link className="button button-lime" href="/contact">Request a quote <ArrowUpRight size={16} /></Link>
-          <a className="button button-glass" href="https://wa.me/918550011040?text=Hello%20Event%20Swash%2C%20I%27d%20like%20to%20discuss%20an%20event." target="_blank" rel="noopener noreferrer">WhatsApp us <ArrowUpRight size={16} /></a>
-          <a className="button button-glass" href="tel:+918550011040">Call the team <ArrowUpRight size={16} /></a>
+          <a className="button button-glass" href={buildWhatsAppUrl("Hello Event Swash, I'd like to discuss an event.")} target="_blank" rel="noopener noreferrer">WhatsApp us <ArrowUpRight size={16} /></a>
+          <a className="button button-glass" href={`tel:${siteDetails.phone.replaceAll(" ", "")}`}>Call the team <ArrowUpRight size={16} /></a>
         </div>
       </div>
     </section>

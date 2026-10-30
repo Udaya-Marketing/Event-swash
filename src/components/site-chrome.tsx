@@ -14,7 +14,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="header-inner">
         <Link className="wordmark" href="/" aria-label="Event Swash home">
-          <span className="wordmark-icon" aria-hidden="true">EW</span>
+          <span className="wordmark-icon" aria-hidden="true">ES</span>
           <span>EVENT <span className="wordmark-light">SWASH</span></span>
         </Link>
         <nav className={`primary-nav ${menuOpen ? "nav-open" : ""}`} aria-label="Main navigation">
@@ -54,7 +54,7 @@ export function SiteFooter() {
       <div className="footer-main">
         <div className="footer-brand">
           <Link className="wordmark" href="/">
-            <span className="wordmark-icon" aria-hidden="true">EW</span>
+            <span className="wordmark-icon" aria-hidden="true">ES</span>
             <span>EVENT <span className="wordmark-light">SWASH</span></span>
           </Link>
           <p>AV rentals for the moments that matter. Based in Bengaluru, ready for the room.</p>
@@ -79,7 +79,7 @@ export function SiteFooter() {
         </div>
         <div className="footer-column">
           <span className="eyebrow">GET IN TOUCH</span>
-          <a href={`mailto:${siteDetails.emails[1]}`}>{siteDetails.emails[1]}</a>
+          <a href={`mailto:${siteDetails.emails[0]}`}>{siteDetails.emails[0]}</a>
           <a href={siteDetails.mapUrl} target="_blank" rel="noopener noreferrer">Bengaluru, India ↗</a>
           <p className="footer-address">{siteDetails.address}</p>
         </div>

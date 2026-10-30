@@ -33,9 +33,9 @@ No database, authentication or environment variables are required.
 
 ## Data and pre-launch review
 
-Product records live in `src/lib/products.ts`; quote estimates and the contact message use that shared catalogue. The accessible reference exposed eight example price listings, although its homepage reports 52 products and packages. The remaining catalogue was not accessible during this implementation, so the site does not fabricate products, prices, availability or specifications. Confirm the complete inventory and all rates with Event Wave before launch.
+Product records live in `src/lib/products.ts`; quote estimates and the contact message use that shared catalogue. The accessible reference exposed eight example price listings, although its homepage reports 52 products and packages. The remaining catalogue was not accessible during this implementation, so the site does not fabricate products, prices, availability or specifications. Confirm the complete inventory and all rates with Event Swash before launch.
 
-Business contact information and claims were supplied in the project brief and should be confirmed. Legal routes are explicitly drafts because the source policy pages redirected to the homepage during review; obtain approved legal copy before publication. Product and event images are illustrative Unsplash-hosted photography, not representations of specific Event Wave equipment.
+Business contact information and claims were supplied in the project brief and should be confirmed. Legal routes are explicitly drafts because the source policy pages redirected to the homepage during review; obtain approved legal copy before publication. Product and event images are illustrative photography, not representations of specific Event Swash equipment.
 
 ## Deployment
 

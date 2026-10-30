@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { ArrowUpRight } from "lucide-react";
-import { buildWhatsAppUrl } from "@/lib/content";
+import { buildWhatsAppUrl, siteDetails } from "@/lib/content";
 import { formatRupees, products } from "@/lib/products";
 import { useQuote } from "@/components/quote-provider";
 
@@ -152,7 +152,7 @@ export function ContactForm() {
       </button>
       {fallback && (
         <div className="form-fallback" role="alert">
-          <p>WhatsApp did not open. Copy your enquiry and send it to +91 85500 11040.</p>
+          <p>WhatsApp did not open. Copy your enquiry and send it to {siteDetails.phone}.</p>
           <button className="text-link" type="button" onClick={copyFallback}>
             {copied ? "Enquiry copied" : "Copy enquiry"}
           </button>

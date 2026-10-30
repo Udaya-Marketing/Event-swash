@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { QuoteProvider } from "@/components/quote-provider";
+import { siteDetails } from "@/lib/content";
 import { PageFrame } from "@/components/site-chrome";
 import "./globals.css";
 
@@ -65,8 +66,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     url: "https://www.eventwave.in",
     description:
       "Audio-visual equipment rentals for events in Bengaluru, including sound, lighting, LED and projection.",
-    telephone: "+918550011040",
-    email: ["devraj@eventwave.in", "info@eventwave.in"],
+    telephone: siteDetails.phone.replaceAll(" ", ""),
+    email: siteDetails.emails,
     image: "https://www.eventwave.in/images/event-swash-led-screens.jpg",
     address: {
       "@type": "PostalAddress",
@@ -89,7 +90,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   };
 
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body>
         <script
           type="application/ld+json"
